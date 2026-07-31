@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-google-genai
+langchain-groq
+google-generativeai
+pypdf
+python-dotenv
+pandas
