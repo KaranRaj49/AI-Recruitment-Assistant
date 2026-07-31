@@ -7,6 +7,11 @@ An intelligent HR automation tool that eliminates manual resume screening. Uploa
 
 ---
 
+## 🌐 Live Demo
+👉 **[Click here to try the live app](https://YOUR-USERNAME-ai-recruitment-assistant.streamlit.app)**
+
+---
+
 ## ✨ Features
 | Feature | Description |
 |---|---|
@@ -18,17 +23,32 @@ An intelligent HR automation tool that eliminates manual resume screening. Uploa
 | ❓ Interview Questions | Auto-generates technical and HR questions per candidate |
 | 🏆 Ranking Dashboard | Sorts all candidates by score for easy comparison |
 | ⬇️ CSV Export | Download full results as a spreadsheet |
+| ✨ Animated UI | Shimmer loading, typing indicators, fade-in effects |
+| 🚀 Live Deployment | Hosted on Streamlit Cloud — no setup needed |
+
+---
+
+## 🎨 UI Highlights
+- 🌊 **Shimmer loading** while AI processes resumes
+- ⌨️ **Typing indicator** with live cursor animation
+- 💫 **Floating avatars** with smooth motion
+- 🎯 **Animated score** that scales in dramatically
+- 📋 **Slide-in questions** one by one
+- 🔵 **Glowing borders** that pulse on active elements
+- 🖱️ **Hover effects** on all interactive elements
+- ✨ **Fade-up animations** on every section load
 
 ---
 
 ## 🛠️ Tech Stack
 | Layer | Technology |
 |---|---|
-| Frontend | Streamlit |
+| Frontend | Streamlit + Custom CSS Animations |
 | AI Pipeline | LangChain LCEL |
 | LLM | LLaMA 3.1 8B via Groq |
 | PDF Processing | PyPDF |
 | Data Handling | Pandas |
+| Deployment | Streamlit Cloud |
 | Language | Python 3.10+ |
 
 ---
@@ -61,20 +81,23 @@ streamlit run app.py
 ## 📁 Project Structure
 
 AI-Recruitment-Assistant/
-├── app.py # Main Streamlit app
+├── app.py # Main Streamlit app + animations
 ├── requirements.txt # Dependencies
 ├── .env # API keys (never upload to GitHub)
+├── .streamlit/
+│ └── secrets.toml # Streamlit Cloud secrets (never upload)
 ├── components/
-│ ├── sidebar.py # Sidebar UI
+│ ├── sidebar.py # Animated sidebar UI
 │ ├── uploader.py # Upload status cards
-│ └── ranking.py # Ranking table + CSV export
+│ ├── ranking.py # Animated ranking table + CSV
+│ └── styles.py # All CSS animations and styles
 ├── utils/
 │ ├── pdf_reader.py # PDF text extraction
-│ ├── prompts.py # LangChain prompts
+│ ├── prompts.py # LangChain master prompt
 │ └── parser.py # Output parser
 ├── ai/
-│ ├── llm.py # LLM setup (Groq)
-│ └── chains.py # LangChain pipeline
+│ ├── llm.py # LLM setup (Groq + Streamlit secrets)
+│ └── chains.py # LangChain LCEL pipeline
 ├── data/ # Sample resumes and JDs
 └── outputs/ # Exported CSV files
 
@@ -82,13 +105,28 @@ AI-Recruitment-Assistant/
 ---
 
 ## 📖 How To Use
-1. Open the app at `http://localhost:8501`
+1. Open the app at the live URL or `http://localhost:8501`
 2. Upload a **Job Description PDF** in the sidebar
 3. Upload one or more **Resume PDFs** in the sidebar
 4. Click **"🚀 Analyze Resumes"** and wait 20-30 seconds
-5. View AI analysis across 5 tabs for each candidate
+5. View AI analysis across 5 tabs for each candidate:
+   - 📋 Resume Summary
+   - 🎯 Skill Match (Matching / Missing / Extra)
+   - 📊 Match Score (0-100%)
+   - 💡 HR Recommendation (Hire / Interview / Reject)
+   - ❓ Interview Questions (Technical + HR)
 6. Scroll down to see the **Ranking Dashboard**
 7. Click **"Download Results as CSV"** to export
+
+---
+
+## 🔮 Future Enhancements
+- 📊 Radar Chart visualization for candidate comparison
+- 💬 Chat with Resume using RAG
+- 🔊 Voice summary with text-to-speech
+- 📧 Auto email draft generator
+- 🔐 Authentication system
+- 🗄️ Database integration (SQLite / PostgreSQL)
 
 ---
 
