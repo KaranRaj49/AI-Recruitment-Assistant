@@ -136,5 +136,5 @@ AI-Recruitment-Assistant/
 ---
 
 <div align="center">
-Made with ❤️ by Karan
+Made with ❤️ by Karan and Varoon
 </div>
